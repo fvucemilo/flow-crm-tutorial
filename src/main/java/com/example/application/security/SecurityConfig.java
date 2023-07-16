@@ -44,12 +44,12 @@ public class SecurityConfig extends VaadinWebSecurity {
     public UserDetailsService users() {
         UserDetails user = User.builder()
                 .username("user")
-                .password("{noop}userpass")
+                .password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
                 .roles("USER")
                 .build();
         UserDetails admin = User.builder()
                 .username("admin")
-                .password("{noop}userpass")
+                .password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
                 .roles("USER", "ADMIN")
                 .build();
 
